@@ -30,8 +30,8 @@ lumi = 10 # 10 fb-1
 
 fraction = 1 # reduce this is you want the code to run quicker
 
-tuple_path = "/eos/user/t/thsteven/OpenData/opentuplepostprocess/renamed/4lep/" # local
-#tuple_path = "http://opendata.atlas.cern/release/samples/2019/4lep/" # web address
+#tuple_path = "Input/4lep/" # local
+tuple_path = "https://atlas-opendata.web.cern.ch/atlas-opendata/samples/2020/4lep/" # web address
 
 stack_order = [r'$Z,t\bar{t}$','ZZ'] # put smallest contribution first, then increase
 

@@ -1,10 +1,23 @@
-## About
-This is an analysis code that may be used to analyse the data of the ATLAS published dataset.
+# Python uproot framework
 
-This framework uses UPROOT and pandas/numpy to have no dependency on ROOT.
+## About
+This is an analysis code that may be used to analyse the data of the ATLAS published dataset, and is available at this [Github link](https://github.com/atlas-outreach-data-tools/atlas-outreach-Python-uproot-framework-13tev)
+
+This framework uses [Python](https://www.python.org) [uproot](https://github.com/scikit-hep/uproot) and [pandas](https://pandas.pydata.org)/[numpy](https://numpy.org) to have no dependency on [ROOT](https://root.cern.ch). This framework uses python3.
+
+The framework consists of **5 main files**:
+
++ the **Analysis** files perform the particular object selection;
++ the **Plotting** files make Data / Prediction plots from saved results;
++ the **Samples** files specify the particular samples to use;
++ the **Cuts** files specify the particular cuts to implement;
++ the **Histograms** files specify which plots to make.
+
+![](uproot_Main_folder.png)
+
+---
 
 ## First Time Setup
->  scl enable rh-python36 bash
 
 >  python3 -m pip install -U numpy pandas uproot matplotlib lmfit tables --user
 
@@ -32,7 +45,7 @@ The first portion of an analysis code specifies the packages that need to be imp
 
 The second portion of an analysis code specifies information such as the locations of files:
 
->	tuple_path = "/eos/project/a/atlas-outreach/projects/open-data/OpenDataTuples/renamedLargeRJets/4lep/"	(file location)
+>	tuple_path = "https://atlas-opendata.web.cern.ch/atlas-opendata/samples/2020/4lep/"	(file location)
 >
 >	stack_order = [r'$Z,t\bar{t}$','ZZ']					(order of coloured bars)
 
@@ -182,6 +195,12 @@ The defined plots can the be drawn like so:
 
 
 The order of the stack is determined by "stack_order".
+
+If everything was successful, the code will show output similar to below.
+
+![](uproot_output.png)
+
+---
 
 ## In Depth Information
 
