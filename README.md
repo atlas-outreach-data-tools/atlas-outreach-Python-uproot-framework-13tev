@@ -5,6 +5,11 @@ This is an analysis code that may be used to analyse the data of the ATLAS publi
 
 This framework uses [Python](https://www.python.org) [uproot](https://github.com/scikit-hep/uproot) and [pandas](https://pandas.pydata.org)/[numpy](https://numpy.org) to have no dependency on [ROOT](https://root.cern.ch). This framework uses python3.
 
+The 13 TeV ATLAS Open Data are **hosted** on the [CERN Open Data portal](http://opendata.cern.ch/) and [ATLAS Open Data portal](http://opendata.atlas.cern) in this [documentation](../datasets/files.md). The framework can access the samples in two ways:
+
++ reading them online directly (by default, they are stored in an [**online repository**](https://atlas-opendata.web.cern.ch/atlas-opendata/samples/2020/))
++ reading them form a local storage (the samples need to be downloaded locally).
+
 The framework consists of **5 main files**:
 
 + the **Analysis** files perform the particular object selection;
