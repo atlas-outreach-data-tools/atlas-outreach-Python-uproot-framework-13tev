@@ -274,9 +274,8 @@ def plot_data(data):
             main_axes.set_ylim(bottom=0,top=(np.amax(data_x)+math.sqrt(np.amax(data_x)))*h_linear_top_margin)
             main_axes.yaxis.set_minor_locator(AutoMinorLocator())
         
-        plt.text(0.05,0.97,'ATLAS',ha="left",va="top",family='sans-serif',transform=main_axes.transAxes,style='italic',weight='bold',fontsize=13)
-        plt.text(0.19,0.97,'Open Data',ha="left",va="top",family='sans-serif',transform=main_axes.transAxes,fontsize=13)
-        plt.text(0.05,0.9,'for education only',ha="left",va="top",family='sans-serif',transform=main_axes.transAxes,style='italic',fontsize=8)
+        plt.text(0.05,0.97,'ATLAS Open Data',ha="left",va="top",family='sans-serif',transform=main_axes.transAxes,fontsize=13)
+        plt.text(0.05,0.9,'for education',ha="left",va="top",family='sans-serif',transform=main_axes.transAxes,style='italic',fontsize=8)
         plt.text(0.05,0.86,r'$\sqrt{s}=13\,\mathrm{TeV},\;\int L\,dt=$'+lumi_used+'$\,\mathrm{fb}^{-1}$',ha="left",va="top",family='sans-serif',transform=main_axes.transAxes)
         plt.text(0.05,0.78,plot_label,ha="left",va="top",family='sans-serif',transform=main_axes.transAxes)
     
@@ -334,7 +333,7 @@ def plot_data(data):
         main_axes.yaxis.set_label_coords(h_y_label_x_position,1)
         ratio_axes.yaxis.set_label_coords(h_y_label_x_position,0.5)
     
-        plt.savefig("HZZ_"+x_variable+".pdf")
+        plt.savefig("HZZ_"+x_variable+".pdf",bbox_inches='tight')
     
     return signal_x,mc_x_tot
 
