@@ -31,8 +31,8 @@ lumi = 0.5 # fb-1 for data_A only
 
 fraction = 1 # reduce this is you want the code to run quicker
 
-#tuple_path = "Input/GamGam/" # local
-tuple_path = "https://atlas-opendata.web.cern.ch/atlas-opendata/samples/2020/GamGam/" # web address
+tuple_path = "/notebooks-collection-opendata/13-TeV-examples/uproot_python/Input/GamGam/" # local
+#tuple_path = "https://atlas-opendata.web.cern.ch/atlas-opendata/samples/2020/GamGam/" # web address
 
 stack_order = [] # put smallest contribution first, then increase
 
