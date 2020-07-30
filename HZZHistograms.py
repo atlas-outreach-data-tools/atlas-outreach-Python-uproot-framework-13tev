@@ -3,6 +3,7 @@ mllll = {
     'bin_width':5,
     'num_bins':34,
     'xrange_min':80,
+    'xlabel':r'$\mathrm{m_{4l}}$ [GeV]',
     'log_y':False,
 
     # change aesthetic parameters if you want

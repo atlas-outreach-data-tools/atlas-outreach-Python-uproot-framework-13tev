@@ -3,6 +3,7 @@ myy = {
     'bin_width':2,
     'num_bins':30,
     'xrange_min':100,
+    'xlabel':r'$\mathrm{m_{\gamma\gamma}}$ [GeV]',
     'log_y':False,
 
     # change aesthetic parameters if you want                                                                                        

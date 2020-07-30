@@ -14,7 +14,6 @@ import HZZSamples
 import HZZCuts
 import HZZHistograms
 import infofile
-import labelfile
 
 class CustomTicker(LogFormatterSciNotation):
     def __call__(self, x, pos=None):
@@ -198,6 +197,7 @@ def plot_data(data):
         h_bin_width = hist['bin_width']
         h_num_bins = hist['num_bins']
         h_xrange_min = hist['xrange_min']
+        h_xlabel = hist['xlabel']
         h_log_y = hist['log_y']
         h_y_label_x_position = hist['y_label_x_position']
         h_legend_loc = hist['legend_loc']
@@ -256,8 +256,8 @@ def plot_data(data):
         main_axes.set_xlim(left=h_xrange_min,right=bins[-1])
         main_axes.xaxis.set_minor_locator(AutoMinorLocator()) # separation of x axis minor ticks
         main_axes.tick_params(which='both',direction='in',top=True,labeltop=False,labelbottom=False,right=True,labelright=False)
-        if len(labelfile.variable_labels[x_variable].split('['))>1:
-            y_units = ' '+labelfile.variable_labels[x_variable][labelfile.variable_labels[x_variable].find("[")+1:labelfile.variable_labels[x_variable].find("]")]
+        if len(h_xlabel.split('['))>1:
+            y_units = ' '+h_xlabel[h_xlabel.find("[")+1:h_xlabel.find("]")]
         else: y_units = ''
         main_axes.set_ylabel(r'Events / '+str(h_bin_width)+y_units,fontname='sans-serif',horizontalalignment='right',y=1.0,fontsize=11)
         if h_log_y:
@@ -318,7 +318,7 @@ def plot_data(data):
         ratio_axes.set_xlim(left=h_xrange_min,right=bins[-1])
         ratio_axes.xaxis.set_minor_locator(AutoMinorLocator()) # separation of x axis minor ticks
         ratio_axes.xaxis.set_label_coords(0.9,-0.2) # (x,y) of x axis label # 0.2 down from x axis
-        ratio_axes.set_xlabel(labelfile.variable_labels[x_variable],fontname='sans-serif',fontsize=11)
+        ratio_axes.set_xlabel(h_xlabel,fontname='sans-serif',fontsize=11)
         ratio_axes.tick_params(which='both',direction='in',top=True,labeltop=False,right=True,labelright=False)
         ratio_axes.set_ylim(bottom=0,top=2.5)
         ratio_axes.set_yticks([0,1,2])
