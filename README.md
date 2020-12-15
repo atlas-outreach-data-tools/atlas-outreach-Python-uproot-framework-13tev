@@ -24,7 +24,7 @@ The framework consists of **5 main files**:
 
 ## First Time Setup
 
->  python3 -m pip install -U numpy pandas uproot matplotlib lmfit tables --user
+>  python3 -m pip install -U numpy pandas uproot matplotlib lmfit tables scikit-learn --user
 
 
 ## Running
