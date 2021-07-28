@@ -1,4 +1,4 @@
-import uproot
+import uproot3 as uproot
 import pandas as pd
 import time
 import math
