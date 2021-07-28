@@ -209,13 +209,13 @@ def plot_data(data):
 data_dict = {}
 for paintable in HyySamples.samples.keys():
     frames = []
-    for val in HyySamples.samples[s]['list']:
+    for val in HyySamples.samples[paintable]['list']:
         if HyyAnalysis.save_results=='csv': temp = pd.read_csv('resultsHyy/dataframe_id_'+val+'.csv',index_col='entry')
         elif HyyAnalysis.save_results=='h5':
             if os.path.exists('resultsHyy/dataframe_id_'+val+'.h5'): temp = pd.read_hdf('resultsHyy/dataframe_id_'+val+'.h5')
         else:
             print("resultsHyy/ files don't match save_results! Change save_results in HyyAnalysis.py")
             raise SystemExit
-            frames.append(temp)
-    data_dict[s] = pd.concat(frames)
+        frames.append(temp)
+    data_dict[paintable] = pd.concat(frames)
 plot_data(data_dict)
